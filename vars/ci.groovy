@@ -10,7 +10,7 @@ def call() {
             stage('Build/compile') {
                 steps {
                    script{
-                       commom.compile()
+                       common.compile()
                    }
                 }
             }
