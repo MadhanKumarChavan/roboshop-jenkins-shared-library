@@ -1,5 +1,4 @@
 def call() {
-
     pipeline {
 
         agent {
@@ -17,7 +16,7 @@ def call() {
             stage('unit Test') {
                 steps {
                     script {
-                        common.unit test()
+                        common.unittest()
                     }
                 }
             }
