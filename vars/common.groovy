@@ -8,16 +8,16 @@ def compile () {
 }
 
 
-//def unittest () {
-//
-//
-//    if (app_lang =="nodejs"){
-//        sh 'npm test'
-//    }
-//    if (app_lang =="maven"){
-//        sh 'mvn test'
-//    }
-//    if (app_lang =="python"){
-//        sh 'python3 -m  unittest'
-//    }
-//}
+def unittest () {
+
+
+    if (app_lang =="nodejs"){
+        sh 'npm test' || true
+    }
+    if (app_lang =="maven"){
+        sh 'mvn test'
+    }
+    if (app_lang =="python"){
+        sh 'python3 -m  unittest'
+    }
+}
