@@ -9,30 +9,31 @@ def call() {
         stages {
             stage('Build/compile') {
                 steps {
-                   script{
-                       common.compile()
-                   }
+                    script {
+                        common.compile()
+                    }
                 }
             }
             stage('unit Test') {
                 steps {
-                    script{
+                    script {
                         common.unittest()
+                    }
                 }
-            }
-            stage('quality control') {
-                steps {
-                    echo 'quality control'
+                stage('quality control') {
+                    steps {
+                        echo 'quality control'
+                    }
                 }
-            }
-            stage('upload in centralized place') {
-                steps {
-                    echo 'upload'
+                stage('upload in centralized place') {
+                    steps {
+                        echo 'upload'
+                    }
                 }
             }
         }
+
     }
 
+
 }
-
-
